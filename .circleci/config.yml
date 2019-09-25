@@ -1,7 +1,7 @@
 version: 2.0
 rexecutor: &rexecutor
   docker:
-    - image: alpine/latest
+    - image: alpine/20190809
     
 jobs:
   build:
