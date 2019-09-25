@@ -1,11 +1,8 @@
 version: 2
-executors:
-  exec1:
-    docker:
-      image: alpine/latest
 jobs:
   build:
-    executor: exec1
+    docker:
+      image: alpine/latest
     steps:
       - run: echo "dnm"
 
