@@ -15,7 +15,7 @@ jobs:
     steps:
       - attach_workspace:
           at: /tmp/workspace
-      - run: echo "$PWD"; ls -a1
+      - run: ls /tmp/workspace -a1
 workflows:
   version: 2
   build_and_test:
