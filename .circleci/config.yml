@@ -1,9 +1,15 @@
-version: 2.1
+version: 2.0
+rexecutor: &rexecutor
+  docker:
+    - image: alpine/latest
+    
 jobs:
   build:
+    *rexecutor
     steps:
       - run: echo build
   test:
+    *rexecutor
     steps:
       - run: echo test
 workflow:
