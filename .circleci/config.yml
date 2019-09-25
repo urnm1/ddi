@@ -1,9 +1,6 @@
 version: 2.0
-rexecutor: &rexecutor
-  machine
 jobs:
   build:
-    <<: *rexecutor
     steps:
       - checkout
       - run: echo build
@@ -13,7 +10,6 @@ jobs:
           paths: 
             - .
   test:
-    <<: *rexecutor
     steps:
       - attach_workspace:
           at: /tmp/workspace
