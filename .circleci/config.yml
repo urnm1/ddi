@@ -6,11 +6,12 @@ jobs:
   build:
     <<: *rexecutor
     steps:
+      - checkout
       - run: echo build
   test:
     <<: *rexecutor
     steps:
-      - run: echo test
+      - run: echo "$PWD"; ls -a1
 workflow:
   build_and_test:
     - build
