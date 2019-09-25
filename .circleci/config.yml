@@ -12,7 +12,7 @@ jobs:
     <<: *rexecutor
     steps:
       - run: echo "$PWD"; ls -a1
-workflow:
+workflows:
   build_and_test:
     - build
     - test:
