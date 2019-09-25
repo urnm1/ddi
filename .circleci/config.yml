@@ -1,8 +1,14 @@
-version: 2
+version: 2.1
 jobs:
   build:
-    docker:
-      - image: alpine/latest
     steps:
-      - run: echo "dnm"
+      - run: echo build
+  test:
+    steps:
+      - run: echo test
+workflow:
+  build_and_test:
+    - build
+    - test:
+        requires: build
 
