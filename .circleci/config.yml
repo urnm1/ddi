@@ -1,7 +1,6 @@
 version: 2.0
 rexecutor: &rexecutor
-  machine:
-    - image: ubuntu/18.10
+  machine
 jobs:
   build:
     <<: *rexecutor
