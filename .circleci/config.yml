@@ -5,7 +5,7 @@ rexecutor: &rexecutor
     
 jobs:
   build:
-    *rexecutor
+    <<: *rexecutor
     steps:
       - run: echo build
   test:
