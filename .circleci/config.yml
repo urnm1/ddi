@@ -9,14 +9,14 @@ jobs:
       - checkout
       - run: echo build
       - persist_to_workspace:
-          root: /tmp/workspace
+          root: .
           paths: 
             - .
   test:
     <<: *rexecutor
     steps:
       - attach_workspace:
-          at: /tmp/workspace
+          at: .
       - run: echo "$PWD"; ls -a1
 workflows:
   version: 2
