@@ -11,6 +11,7 @@ jobs:
           paths: 
             - .
   test:
+    executor: machine
     steps:
       - attach_workspace:
           at: /tmp/workspace
