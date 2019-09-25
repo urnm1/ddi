@@ -11,7 +11,7 @@ jobs:
       - persist_workspace:
           root: /tmp/workspace
           paths: 
-            - *
+            - .
   test:
     <<: *rexecutor
     steps:
