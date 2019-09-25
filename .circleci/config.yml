@@ -16,5 +16,6 @@ workflow:
   build_and_test:
     - build
     - test:
-        require: build
+        requires:
+          - build
 
