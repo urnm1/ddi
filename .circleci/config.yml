@@ -1,22 +1,23 @@
 version: 2.0
 rexecutor: &rexecutor
   docker:
-    - image: alpine:20190809
+    - image: ubuntu:latest 
 jobs:
   build:
     <<: *rexecutor
     steps:
       - checkout
       - run: echo build
+      - run: ln -s /tmp/workspace .
       - persist_to_workspace:
-          root: .
+          root: /tmp/workspace
           paths: 
             - .
   test:
     <<: *rexecutor
     steps:
       - attach_workspace:
-          at: .
+          at: /tmp/workspace
       - run: echo "$PWD"; ls -a1
 workflows:
   version: 2
